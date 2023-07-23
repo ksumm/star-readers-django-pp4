@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-ksumm-starreadersdjang-5rndd1y4mwe.ws-eu101.gitpod.io', 'star-readers-1244edd69a23.herokuapp.com/', 'localhost'
+    '8000-ksumm-starreadersdjang-5rndd1y4mwe.ws-eu102.gitpod.io', 'star-readers-1244edd69a23.herokuapp.com/', 'localhost'
 ]
 
 
