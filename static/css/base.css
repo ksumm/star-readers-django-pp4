@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400;500&family=Roboto:wght@100;300;400;500&family=Vibur&display=swap');
+
+:root {
+    /* Fonts */
+    --title: 'Vibur', serif;
+    --main-font: 'Roboto', serif;
+
+    /* Colours */
+    --background: #ffbf50c9;
+    --off-white: #f6f6f6;
+
+    /* Utils */
+    --small-box-shadow: 1px -1px 7px 0 #00000061;
+    --border: 1px solid #00000030;
+
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--main-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--title);
+}
+
+main {
+    flex: 1 0 auto;
+    background-color: var(--off-white);
+}
+
+
+/* Header */
+
+.navbar {
+    background-color: var(--off-white);
+    box-shadow: var(--small-box-shadow);
+}
+
+img.logo {
+    width: 18.75rem
+}
+
+/* Footer */
+
+footer{
+    flex-shrink: 0;
+    background-color: var(--off-white);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top: var(--border);
+}
+
+.social-icon {
+    height: 2rem;
+    margin: 1rem;
+}
