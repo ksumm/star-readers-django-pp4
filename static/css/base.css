@@ -31,14 +31,14 @@ h1, h2, h3, h4, h5, h6 {
 
 main {
     flex: 1 0 auto;
-    background-color: var(--off-white);
+    background-color: var(--white);
 }
 
 
 /* Header */
 
 .navbar {
-    background-color: var(--off-white);
+    background-color: var(--white);
     box-shadow: var(--small-box-shadow);
 }
 
@@ -50,7 +50,7 @@ img.logo {
 
 footer{
     flex-shrink: 0;
-    background-color: var(--off-white);
+    background-color: var(--white);
     display: flex;
     flex-direction: row;
     justify-content: center;
