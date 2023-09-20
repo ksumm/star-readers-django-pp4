@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post
+from .models import Post, age_range
 from .forms import CommentForm
 
 
@@ -11,6 +11,13 @@ class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 6
+
+    # Function for age groups
+    def get_context_data(self, *args, **kwargs):
+        age_menu = age_range.objects.all()
+        context = super(PostList, self).get_context_data(*args, **kwargs)
+        context["age_menu"] = age_menu
+        return context
 
 
 class PostDetail(View):

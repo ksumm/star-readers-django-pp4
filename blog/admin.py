@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment
+from .models import Post, Comment, age_range
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -18,5 +18,8 @@ class CommentAdmin(admin.ModelAdmin):
     list_display = ('name', 'body', 'post', 'created_on', 'approved')
     list_filter = ('approved', 'created_on')
     search_fields = ('name', 'email', 'body')
+
+    
+admin.site.register(age_range)   
 
 
