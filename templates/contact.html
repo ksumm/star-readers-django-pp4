@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %} 
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">  
+
+    <div class="container fluid">
+      <div class="row">
+        <!-- Section Titile -->
+        <div class="col-md-12 pt-5">
+          <h3 class="section-title">Love to Hear From You</h3>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Section Titile -->
+        <p> The Star Readers blog is... Our mission is....</p>
+      </div>
+      <!-- contact form -->
+      <div class="text-secondary">
+        <form id="contact-form" method="post"> {% csrf_token %} {{ form|crispy }}
+          <!-- Form Submit -->
+          <button id="submitForm" class="btn btn-signup">Send</button>
+        </form>
+      </div>
+    </div>
+
+
+{% endblock %}

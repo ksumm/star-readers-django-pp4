@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post, age_range
-from .forms import CommentForm
+from .models import Post, age_range, Contact
+from .forms import CommentForm, ContactForm
 
 
 
@@ -83,7 +83,33 @@ class PostLike(View):
         else: 
             post.likes.add(request.user)
 
-        return HttpResponseRedirect(reverse('post_detail', args=[slug]))    
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))  
 
+
+
+def contact(request):
+    """
+    Submits contact us form to the admin dashboard only
+    to be approved.
+    """
+    submitted = False
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/thank_you.html?submitted = True')
+    else:
+        form = ContactForm()
+        if 'submitted' in request.GET:
+            submitted = True
+    return render(request, 'contact.html',
+                  {'form': form, 'submitted': submitted})     
+
+
+
+def thank_you(request):
+    template = 'thank_you.html'
+    context = {}
+    return render(request, template, context)
 
     

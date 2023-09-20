@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment, age_range
+from .models import Post, Comment, Contact, age_range
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -21,5 +21,6 @@ class CommentAdmin(admin.ModelAdmin):
 
     
 admin.site.register(age_range)   
+admin.site.register(Contact)
 
 
