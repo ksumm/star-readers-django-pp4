@@ -71,3 +71,10 @@ footer{
     margin: 1rem;
 }
 
+
+/* Contact Us Form */
+
+#submitForm.btn {
+   margin-top: 2rem;
+}
+
