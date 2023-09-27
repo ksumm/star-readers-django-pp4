@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400;500&family=Roboto:wght@100;300;400;500&family=Vibur&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Roboto:wght@100;400;500&display=swap');
 
 :root {
     /* Fonts */
-    --title: 'Vibur', serif;
+    --title: 'Kalam', serif;
     --main-font: 'Roboto', serif;
 
     /* Colours */
@@ -69,6 +69,35 @@ footer{
 .social-icon {
     height: 2rem;
     margin: 1rem;
+}
+
+
+/* Hero Image call to action text */
+
+.welcome {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    font-size: 25px;
+    display: center;
+ 
+}
+
+
+a.btn.btn-signup {
+    background-color: #ffff;
+    color:#56376d;
+}
+
+
+
+
+.welcome a:hover {
+    background-color:#ffbf50c9;
+    color:white;
+    font-weight: 700;
+}
+.card-text {
+    font-weight: 600;
 }
 
 
