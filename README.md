@@ -1,39 +1,153 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **⭐️ The Star Readers Blog ⭐️**
 
-Welcome,
 
-This is the Code Institute student template for Codeanywhere. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **May 11th, 2023**
+The Star Readers is a blog about kids books 
+You can view the live site here - <a href="https://star-readers-4ce320d039d2.herokuapp.com/)" target="_blank"> The Star Readers </a>
 
-## Codeanywhere Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## CONTENTS
 
-`python3 -m http.server`
+* [User Experience](#user-experience-ux)
+  * [Project Goals](#project-goals)
+  * [User Stories](#user-stories)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+* [Design](#design)
+  * [Colour Scheme](#colour-scheme)
+  * [Typography](#typography)
+  * [Imagery](#imagery)
+  * [Wireframes](#wireframes)
+  * [Flow Chart](#flow-chart)
+  * [Database Schema](#database-schema) 
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+* [Agile Development Process](#agile-development-process)
 
-`http_server`
+* [Features](#features)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* [Technologies Used](#technologies-used)
+  * [Languages Used](#languages-used)
+  * [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+* [Testing](#testing)
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* [Deployment & Local Development](#deployment--local-development)
+  * [Remote Deployment](#remote-deployment)
+  * [Local Deployment](#local-deployment)
+    * [How to Fork](#how-to-fork)
+    * [How to Clone](#how-to-clone)
+    * [Using Gitpod](#using-gitpod)
 
-To log into the Heroku toolbelt CLI:
+* [Credits](#credits)
+  * [Code Used](#code-used)
+  * [Acknowledgments](#acknowledgme
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## User Experience (UX)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Project Goals
 
----
+* To crate a website where users can read about popular kids books and discuss them
+* To allow the user to comment, like and unlike book reviews
+* To provide user the possibility to contact site administaration
+* To provide the admin user with the ability to approve, update and delete book reviews in the backend
+  
 
-Happy coding!
+
+### User Stories
+
+The Agile Methodology was used to plan this project. This was implemented through Github and the Project Board, which can be seen here -  <a href=""> The Star Readers </a>
+
+
+
+### Future Developement
+
+
+
+
+
+
+## Design
+
+### Colour Scheme
+
+### Typography
+
+### Imagery
+
+
+### Wireframes
+
+### Flow Chart
+
+### Database Schema
+
+## Agile Development Process
+
+
+## Features
+
+
+## Technologies Used
+
+### Languages Used
+
+### Frameworks, Libraries & Programs Used
+
+
+## Testing
+
+## Deployment & Local Development
+
+### Remote Deployment
+
+
+Before deploying, run 'pip3 freeze > requirements.txt' on the terminal of your IDE of choice.
+
+The site was deployed to Heroku. The steps to deploy are as follows: 
+  1. Create an account and log in your [Heroku](https://id.heroku.com/login) account. 
+  2. On the dashboard, click on the button New -> Create new app on the right side of the page.
+  3. Choose a name and select your region. Click on Create app.
+  4. Go to the Settings tab. Scroll down to Config Vars. 
+  - Add key PORT and value 8000.
+  - Add key DATABASE_URL and add the value of your database on ElephantSQL or other host of choice.
+  - Add key CLOUDINARY_URL and add the value of your cloudinary host link.
+  - Add key SECRET_KEY and add the value of your choice for this secret key.
+  - Add key DISABLE_COLLECTSTATIC and add the value of 1. (Don't forget to remove this key before the final deployment.)
+  5. Go to the Deploy tab. Select GitHub as Deployment Method. Connect your account.
+  6. Enter the name of the repository that you forked, search and connect.
+  7. Select the branch and click Deploy Branch.
+
+The live link can be found here - [The Star Readers](https://star-readers-4ce320d039d2.herokuapp.com/)
+
+### Local Deployment
+
+#### How to Fork
+
+  1. Log In or Sign Up to GitHub.
+  2. Go to this project repository https://github.com/ksumm/star-readers-django-pp4
+  2. On the top right of the page, there's a button with the option Fork. Click on it.
+  3. A new page, "Create a new fork", will open. If you wish, you can edit the name.
+  4. At the end of the page, click on "Create fork".
+  5. Now, you have a copy of the project in your repositories.
+
+#### How to Clone
+
+  1. Log In or Sign Up to GitHub.
+  2. Go to this project repository [https://github.com/ksumm/star-readers-django-pp4](https://github.com/ksumm/star-readers-django-pp4)
+  3. Click on the Code button and select if you would like to clone with HTTPS, SSH or GitHub CLI and copy the link.
+  4. Open the terminal in the code editor of your choice and change the current working directory to the one you will use for to clone the repository.
+  5. Type 'git clone' into the terminal and then paste the link you copied before and press Enter.
+
+#### Using Gitpod
+If you would like to edit your copy of this repository on Gitpod, you will need to: 
+  1. On your browser of choice, install the Gitpod extension/add-on.
+  2. On GitHub, open the project repository you forked before.
+  3. On the top of the page, over the files, there is a green button on the right side of the page saying "Gitpod". Click it.
+  4. It will open the Gitpod website. On the first time, you will select to connect with your GitHub account and Authorize gitpod-io. After that, you'll create an account.
+  5. It might take a while after that because Gitpod will create your workspace.
+  After the workspace is loaded, you can edit it on Gitpod.
+
+## Credits
+
+### Code Used
+
+### Acknowledgments
