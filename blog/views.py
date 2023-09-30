@@ -1,8 +1,13 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
-from django.http import HttpResponseRedirect
-from .models import Post, age_range, Contact
 from .forms import CommentForm, ContactForm
+from django.views.generic import (CreateView, ListView, DetailView,
+                                  DeleteView, UpdateView)
+from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.mixins import (
+    UserPassesTestMixin, LoginRequiredMixin)
+from .models import Post, age_range, Contact
+from .forms import CommentForm, ContactForm, AddPost                                   
 
 
 
@@ -84,6 +89,28 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))  
+
+
+class AddPost(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+    """Add post """
+    template_name = 'add_post.html'
+    form_class = AddPost
+
+    success_url = "/blog/"
+    success_message = "Your post was created successfully"
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(AddPost, self).form_valid(form)
+
+
+class PostEditView(UpdateView):
+    model = Post   
+    fields = ['body']
+    template_name = 'blog/post_edit.html'
+
+    def get_success_url(self):
+        pk=self.kwargs['pk']
 
 
 
