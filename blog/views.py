@@ -7,7 +7,8 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import (
     UserPassesTestMixin, LoginRequiredMixin)
 from .models import Post, age_range, Contact
-from .forms import CommentForm, ContactForm, AddPost                                   
+from django.contrib import messages
+from .forms import CommentForm, ContactForm, AddPostForm                                
 
 
 
@@ -77,6 +78,9 @@ class PostDetail(View):
             },
         )
 
+
+
+
 class PostLike(View):
 
     def post(self, request, slug):
@@ -88,25 +92,34 @@ class PostLike(View):
         else: 
             post.likes.add(request.user)
 
-        return HttpResponseRedirect(reverse('post_detail', args=[slug]))  
+        return HttpResponseRedirect(reverse('post_detail', args=[slug])) 
+
 
 
 class AddPost(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     """Add post """
     model = Post
     template_name = 'add_post.html'
-    form_class = AddPost
+    form_class = AddPostForm
   
 
 
 
-class PostEditView(UpdateView):
+class UpdatePost(LoginRequiredMixin, UserPassesTestMixin,
+                    SuccessMessageMixin, UpdateView):
     model = Post   
-    fields = ['body']
-    template_name = 'blog/post_edit.html'
+    template_name = 'update_post.html'
+    form_class = AddPostForm
+    success_message = "Post updated successfully"
 
-    def get_success_url(self):
-        pk=self.kwargs['pk']
+    def test_func(self):
+        """
+        Check if the current user is the author of the post being updated
+        """
+        post = self.get_object()
+        return self.request.user == post.author
+
+
 
 
 

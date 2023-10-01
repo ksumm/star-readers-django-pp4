@@ -2,8 +2,7 @@ from django import forms
 from django.forms import ModelForm
 from .models import Post, Comment, Contact
 
-class AddPost(forms.ModelForm):
-
+class AddPostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields =  (
