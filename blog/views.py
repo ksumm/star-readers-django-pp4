@@ -8,7 +8,8 @@ from django.contrib.auth.mixins import (
     UserPassesTestMixin, LoginRequiredMixin)
 from .models import Post, age_range, Contact
 from django.contrib import messages
-from .forms import CommentForm, ContactForm, AddPostForm                                
+from .forms import CommentForm, ContactForm, AddPostForm 
+from django.urls import reverse_lazy                               
 
 
 
@@ -120,6 +121,26 @@ class UpdatePost(LoginRequiredMixin, UserPassesTestMixin,
         return self.request.user == post.author
 
 
+class DeletePost(LoginRequiredMixin, UserPassesTestMixin,
+                      SuccessMessageMixin, DeleteView):
+
+    model = Post   
+    template_name = 'delete_post.html'
+    success_url = reverse_lazy('blog')
+    success_message = "Post deleted successfully"
+
+    def test_func(self):
+        """
+        Check if the current user is the author of the post being updated
+        """
+        post = self.get_object()
+        return self.request.user == post.author
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, self.success_message)
+        return super(DeletePost, self).delete(request, *args, **kwargs)
+
+  
 
 
 
