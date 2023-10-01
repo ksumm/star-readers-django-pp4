@@ -93,15 +93,11 @@ class PostLike(View):
 
 class AddPost(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     """Add post """
+    model = Post
     template_name = 'add_post.html'
     form_class = AddPost
+  
 
-    success_url = "/blog/"
-    success_message = "Your post was created successfully"
-
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super(AddPost, self).form_valid(form)
 
 
 class PostEditView(UpdateView):

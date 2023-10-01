@@ -8,6 +8,7 @@ class AddPost(forms.ModelForm):
         model = Post
         fields =  (
             'title',
+            'slug',
             'author',
             'content',
             'featured_image',
@@ -23,6 +24,7 @@ class AddPost(forms.ModelForm):
         labels = {
             'title': 'Book Title',
             'content': 'Your review',
+            'slug': 'Title tag',
         }
 
 
