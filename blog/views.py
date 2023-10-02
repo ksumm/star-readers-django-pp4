@@ -1,15 +1,16 @@
+
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
-from .forms import CommentForm, ContactForm
+from .models import Post, age_range, Contact
+from .forms import CommentForm, ContactForm, AddPostForm 
+from django.contrib import messages
+from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy
 from django.views.generic import (CreateView, ListView, DetailView,
                                   DeleteView, UpdateView)
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import (
-    UserPassesTestMixin, LoginRequiredMixin)
-from .models import Post, age_range, Contact
-from django.contrib import messages
-from .forms import CommentForm, ContactForm, AddPostForm 
-from django.urls import reverse_lazy                               
+    UserPassesTestMixin, LoginRequiredMixin)                               
 
 
 
