@@ -2,8 +2,10 @@
 
 
 
-The Star Readers is a blog about kids books 
+The Star Readers is a website for people who want to check out new children's book releases and suggestions of popular books to read. Users are able to create their own posts, comment, and add likes to them. 
 You can view the live site here - <a href="https://star-readers-4ce320d039d2.herokuapp.com/)" target="_blank"> The Star Readers </a>
+
+![](docs/mockup.png)
 
 
 ## CONTENTS
