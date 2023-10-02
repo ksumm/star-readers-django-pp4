@@ -67,7 +67,7 @@ The Agile Methodology was used to plan this project. This was implemented throug
 ### Colour Scheme
 
 The colour scheme was chosen using the [Imagecolorpicker](https://imagecolorpicker.com) 
-![Color scheme](docs/color_palette.png)
+![Color scheme](docs/colour_palette.png)
 
 ### The main colors used:
 
@@ -91,11 +91,19 @@ The visual of the main page was developed in Canva:
 ![Database schema](docs/database.png)
 
 ## Agile Development Process
+This project used GitHub Projects Tool to create the Scrum board and use agile methodology. [Link for board:](https://github.com/users/ksumm/projects/7/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%2C%22Milestone%22%5D) 
 
-
+![Board](docs/kanban.png)
 
 ## Features
-
+* Navbar
+  ![Navbar](docs/navbar.png)
+* Navbar when User logged in
+  ![Navbar](docs/logged_navbar.png)
+* Call to action when User logged in
+  ![Navbar](docs/user_name.png)
+* Contact page
+  ![Navbar](docs/contact.png)  
 
 ## Technologies Used
 
