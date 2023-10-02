@@ -3,10 +3,12 @@
 
 
 The Star Readers is a website for people who want to check out new children's book releases and suggestions of popular books to read. Users are able to create their own posts, comment, and add likes to them. 
-You can view the live site here - <a href="https://star-readers-4ce320d039d2.herokuapp.com/)" target="_blank"> The Star Readers </a>
 
+
+## 🔗 [View the live project here.](https://star-readers-4ce320d039d2.herokuapp.com)
 ![](docs/mockup.png)
 
+---
 
 ## CONTENTS
 
@@ -17,9 +19,7 @@ You can view the live site here - <a href="https://star-readers-4ce320d039d2.her
 * [Design](#design)
   * [Colour Scheme](#colour-scheme)
   * [Typography](#typography)
-  * [Imagery](#imagery)
   * [Wireframes](#wireframes)
-  * [Flow Chart](#flow-chart)
   * [Database Schema](#database-schema) 
 
 * [Agile Development Process](#agile-development-process)
@@ -41,48 +41,57 @@ You can view the live site here - <a href="https://star-readers-4ce320d039d2.her
 
 * [Credits](#credits)
   * [Code Used](#code-used)
-  * [Acknowledgments](#acknowledgme
+  * [Acknowledgments](#acknowledgments)
 
 ## User Experience (UX)
 
 ### Project Goals
 
 * To crate a website where users can read about popular kids books and discuss them
-* To allow the user to comment, like and unlike book reviews
+* To allow the user to create book review, comment, like and unlike book post
 * To provide user the possibility to contact site administaration
 * To provide the admin user with the ability to approve, update and delete book reviews in the backend
   
-
-
 ### User Stories
 
 The Agile Methodology was used to plan this project. This was implemented through Github and the Project Board, which can be seen here -  <a href=""> The Star Readers </a>
 
-
-
 ### Future Developement
 
-
-
-
-
-
+* Add books categories
+* Add search engine
+* Add alert mesages
+  
 ## Design
 
 ### Colour Scheme
 
+The colour scheme was chosen using the [Imagecolorpicker](https://imagecolorpicker.com) 
+![Color scheme](docs/color_palette.png)
+
+### The main colors used:
+
+- #56376d;
+- #eec043;
+- white
+
 ### Typography
 
-### Imagery
-
+Google Fonts was used to select and import the fonts on this project:
+* [Roboto](https://fonts.google.com/specimen/Roboto) 
+* [Kalam](https://fonts.google.com/specimen/Kalam?query=kalam)
 
 ### Wireframes
+The visual of the main page was developed in Canva:
 
-### Flow Chart
+![Wireframe](docs/wireframe.png)
 
 ### Database Schema
 
+![Database schema](docs/database.png)
+
 ## Agile Development Process
+
 
 
 ## Features
@@ -91,8 +100,30 @@ The Agile Methodology was used to plan this project. This was implemented throug
 ## Technologies Used
 
 ### Languages Used
+  - HTML5
+  - CSS3
+  - JavaScript
+  - Python
 
 ### Frameworks, Libraries & Programs Used
+* [Git](https://git-scm.com/) for version control.
+* [GitHub](https://github.com/) to store the project files.
+* [Canva](https://www.canva.com/) to create the logo.
+* [Django](https://www.djangoproject.com/) as the Python Framework.
+* [Heroku](https://www.heroku.com/home/) to deploy the website.
+* [ElephantSQL](https://www.elephantsql.com/) to host the database.
+* [Cloudinary](https://cloudinary.com/) to host images
+* [Django-allauth](https://django-allauth.readthedocs.io/en/latest/) to create accounts.
+* [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) to create the forms based on the models.
+* [Gunicorn](https://gunicorn.org/) as the webserver to host Django on Heroku.
+* [dj-database-url](https://pypi.org/project/dj-database-url/) to create DATABASE_URL to configure the Django application.
+* [psycopg2](https://pypi.org/project/psycopg2/) as PostgreSQL adapter.
+* [Whitenoise](https://whitenoise.readthedocs.io/en/latest/index.html) to host static files.
+* [Tables Generator](https://www.tablesgenerator.com/markdown_tables) to create tables for TESTING.md
+* [RandomKeyGen](https://randomkeygen.com/) to create the SECRET_KEY for the project.
+* [Google Fonts](https://fonts.google.com/) to import the fonts used on the website.
+* [Bootstrap](https://getbootstrap.com/) for layout.
+* [Lucidchart](https://lucid.app/) for database schema.
 
 
 ## Testing
@@ -100,7 +131,6 @@ The Agile Methodology was used to plan this project. This was implemented throug
 ## Deployment & Local Development
 
 ### Remote Deployment
-
 
 Before deploying, run 'pip3 freeze > requirements.txt' on the terminal of your IDE of choice.
 
@@ -151,5 +181,6 @@ If you would like to edit your copy of this repository on Gitpod, you will need 
 ## Credits
 
 ### Code Used
+
 
 ### Acknowledgments
