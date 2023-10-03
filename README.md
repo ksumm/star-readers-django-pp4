@@ -40,7 +40,6 @@ The Star Readers is a website for people who want to check out new children's bo
     * [Using Gitpod](#using-gitpod)
 
 * [Credits](#credits)
-  * [Code Used](#code-used)
   * [Acknowledgments](#acknowledgments)
 
 ## User Experience (UX)
@@ -103,7 +102,9 @@ This project used GitHub Projects Tool to create the Scrum board and use agile m
 * Call to action when User logged in
   ![Navbar](docs/user_name.png)
 * Contact page
-  ![Navbar](docs/contact.png)  
+  ![Navbar](docs/contact.png)
+* Comments and Edit/Delete post features
+  ![Comments](docs/comments.png)   
 
 ## Technologies Used
 
@@ -135,6 +136,9 @@ This project used GitHub Projects Tool to create the Scrum board and use agile m
 
 
 ## Testing
+
+Please check the [TESTING.md](TESTING.md) file for all the tests.
+
 
 ## Deployment & Local Development
 
@@ -188,7 +192,11 @@ If you would like to edit your copy of this repository on Gitpod, you will need 
 
 ## Credits
 
-### Code Used
+- [this](https://www.youtube.com/watch?v=J7xaESAddDQ&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=6) YouTube tutorial was used to figure out how to develop Edit/Delete post feature.
+- [this](https://www.youtube.com/watch?v=E9eWdZTpiGA&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=4) YouTube tutorial was used to figure out how to develop Navbar
 
 
 ### Acknowledgments
+
+- I would like to thank my Code Institute mentor, Rory Patrick Sheridan for his support and feedback throughout this project. 
+- I would like to thank my Code Institute tutors, Sarah and Sean for their patience and support when I was trying to solve my issue with Update Post functionality.
