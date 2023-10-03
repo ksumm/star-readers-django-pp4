@@ -4,7 +4,7 @@
 
 ### CSS
 The CSS (base.css) was checked on [Jigsaw Validator](https://jigsaw.w3.org/css-validator/) 
-![CSS](docs/testing/css.jpg)
+![CSS](docs/testing/css.jpeg)
 
 ### CI Python Linter
 The Python was checked on CI Python linter:
