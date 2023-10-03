@@ -2,7 +2,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from .models import Post, age_range, Contact
-from .forms import CommentForm, ContactForm, AddPostForm 
+from .forms import CommentForm, ContactForm, AddPostForm
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
@@ -10,8 +10,7 @@ from django.views.generic import (CreateView, ListView, DetailView,
                                   DeleteView, UpdateView)
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import (
-    UserPassesTestMixin, LoginRequiredMixin)                               
-
+    UserPassesTestMixin, LoginRequiredMixin)
 
 
 class PostList(generic.ListView):
@@ -66,8 +65,7 @@ class PostDetail(View):
             comment.post = post
             comment.save()
         else:
-            comment_form = CommentForm()    
-
+            comment_form = CommentForm()
         return render(
             request,
             "post_detail.html",
@@ -81,8 +79,6 @@ class PostDetail(View):
         )
 
 
-
-
 class PostLike(View):
 
     def post(self, request, slug):
@@ -90,12 +86,10 @@ class PostLike(View):
 
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
-
-        else: 
+        else:
             post.likes.add(request.user)
 
-        return HttpResponseRedirect(reverse('post_detail', args=[slug])) 
-
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
 class AddPost(LoginRequiredMixin, SuccessMessageMixin, CreateView):
@@ -103,13 +97,11 @@ class AddPost(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = Post
     template_name = 'add_post.html'
     form_class = AddPostForm
-  
-
 
 
 class UpdatePost(LoginRequiredMixin, UserPassesTestMixin,
-                    SuccessMessageMixin, UpdateView):
-    model = Post   
+                SuccessMessageMixin, UpdateView):
+    model = Post
     template_name = 'update_post.html'
     form_class = AddPostForm
     success_message = "Post updated successfully"
@@ -123,9 +115,9 @@ class UpdatePost(LoginRequiredMixin, UserPassesTestMixin,
 
 
 class DeletePost(LoginRequiredMixin, UserPassesTestMixin,
-                      SuccessMessageMixin, DeleteView):
+                SuccessMessageMixin, DeleteView):
 
-    model = Post   
+    model = Post
     template_name = 'delete_post.html'
     success_url = reverse_lazy('blog')
     success_message = "Post deleted successfully"
@@ -140,9 +132,6 @@ class DeletePost(LoginRequiredMixin, UserPassesTestMixin,
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, self.success_message)
         return super(DeletePost, self).delete(request, *args, **kwargs)
-
-  
-
 
 
 def contact(request):
@@ -161,13 +150,10 @@ def contact(request):
         if 'submitted' in request.GET:
             submitted = True
     return render(request, 'contact.html',
-                  {'form': form, 'submitted': submitted})     
-
+                  {'form': form, 'submitted': submitted})
 
 
 def thank_you(request):
     template = 'thank_you.html'
     context = {}
     return render(request, template, context)
-
-    

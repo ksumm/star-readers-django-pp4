@@ -2,10 +2,11 @@ from django import forms
 from django.forms import ModelForm
 from .models import Post, Comment, Contact
 
+
 class AddPostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields =  (
+        fields = (
             'title',
             'slug',
             'author',
@@ -16,9 +17,8 @@ class AddPostForm(forms.ModelForm):
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control',
                                         'label': 'name'}),
-            'content': forms.Textarea(attrs={'class': 'form-control'}),                              
+            'content': forms.Textarea(attrs={'class': 'form-control'}),
         }
-
 
         labels = {
             'title': 'Book Title',
@@ -39,4 +39,4 @@ class ContactForm(forms.ModelForm):
     """
     class Meta:
         model = Contact
-        fields = '__all__'        
+        fields = '__all__'

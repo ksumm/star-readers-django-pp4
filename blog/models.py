@@ -21,7 +21,6 @@ class age_range(models.Model):
         return self.age_name
 
 
-
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
@@ -37,7 +36,7 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
-        User, related_name='blogpost_like', blank=True) 
+        User, related_name='blogpost_like', blank=True)
 
     class Meta:
         ordering = ["-created_on"]
@@ -49,9 +48,7 @@ class Post(models.Model):
         return self.likes.count()
 
     def get_absolute_url(self):
-        return reverse('blog')    
-
-        
+        return reverse('blog')
 
 
 class Comment(models.Model):
@@ -75,4 +72,4 @@ class Contact(models.Model):
     message = models.TextField()
 
     def __str__(self):
-        return self.name        
+        return self.name
