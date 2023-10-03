@@ -128,4 +128,4 @@ I used Chrome Developer Tools' Lighthouse to test the Performance, Accessibility
 * No Books categories when the User fills Create Review form  - in development. Will fix in next release
 
 ### Fixed Bugs
-* 404 page is shown after pressing the Edit Review button : Fixed, [commit ea66877]([commit ea66877](https://github.com/ksumm/star-readers-django-pp4/commit/ea668775394c9c78fbd38ac0118376f2d56f0068)https://github.com/ksumm/star-readers-django-pp4/commit/ea668775394c9c78fbd38ac0118376f2d56f0068)
+* 404 page is shown after pressing the Edit Review button : Fixed, [commit ea66877](https://github.com/ksumm/star-readers-django-pp4/commit/ea668775394c9c78fbd38ac0118376f2d56f0068)
