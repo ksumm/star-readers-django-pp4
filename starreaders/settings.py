@@ -29,7 +29,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-ksumm-starreadersdjang-jt52ntyl4bh.ws-eu104.gitpod.io', 'star-readers-4ce320d039d2.herokuapp.com', 'localhost', '8000-ksumm-starreadersdjang-jt52ntyl4bh.ws-eu105.gitpod.io'
