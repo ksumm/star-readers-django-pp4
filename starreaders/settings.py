@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '8000-ksumm-starreadersdjang-jt52ntyl4bh.ws-eu104.gitpod.io', 'star-readers-4ce320d039d2.herokuapp.com', 'localhost', '8000-ksumm-starreadersdjang-jt52ntyl4bh.ws-eu105.gitpod.io'
+    '8000-ksumm-starreadersdjang-jt52ntyl4bh.ws-eu105.gitpod.io', 'star-readers-4ce320d039d2.herokuapp.com', 'localhost',
 ]
 
 
@@ -48,8 +48,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
     'cloudinary',
     'django_summernote',
     'crispy_forms',
